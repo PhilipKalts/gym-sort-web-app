@@ -1,0 +1,41 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\Other Projects\\gym\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym\\gym\\gym\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "settings.py",
+              "DocumentMoniker": "D:\\Other Projects\\gym\\gym\\gym\\settings.py",
+              "RelativeDocumentMoniker": "gym\\gym\\settings.py",
+              "ToolTip": "D:\\Other Projects\\gym\\gym\\gym\\settings.py",
+              "RelativeToolTip": "gym\\gym\\settings.py",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
+              "WhenOpened": "2024-12-15T05:54:01.83Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
