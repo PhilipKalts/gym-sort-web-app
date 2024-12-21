@@ -1,5 +1,17 @@
 {% extends "gym/layout.html" %}
-
 {% block body %}
+
+<!-- #region Search -->
+<p>
+    <input id="search-input" type="text" placeholder="Search name">
+    <button id="search-button">Search</button>
+</p>
+<div id="results">
+    <!--Results are displayed here-->
+</div>
+<!-- #endregion -->
+
+<p>All Trainees Selected</p>
 <button href="generate">Generate</button>
+
 {% endblock %}

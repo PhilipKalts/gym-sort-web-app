@@ -40,12 +40,15 @@
     <Compile Include="gym\wsgi.py" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="gym\static\trainee.js" />
+    <Content Include="gym\templates\gym\trainees.html" />
     <Content Include="gym\templates\gym\index.html" />
     <Content Include="gym\templates\gym\layout.html" />
     <Content Include="requirements.txt" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="gym\" />
+    <Folder Include="gym\static\" />
     <Folder Include="gym\templates\" />
     <Folder Include="gym\templates\gym\" />
   </ItemGroup>

@@ -1,0 +1,37 @@
+{% extends "gym/layout.html" %}
+
+{% block body %}
+
+<!-- #region message -->
+
+{% if message %}
+    {% if didAdd %}
+        <p style="color:green;">{{ message }}</p>
+    {% else %}
+        <p style="color:red;">{{ message }}</p>
+    {% endif %}
+{% endif %}
+
+<!-- #endregion -->
+
+<!-- #region form -->
+
+<form method="post">
+    {% csrf_token %}
+    <p>
+        <input name="name" placeholder="Trainee Name" required>
+    </p>
+    <p>
+        <input name="score" type="number" placeholder="Score" min="1" max="10" required>
+    </p>
+
+    Comments
+    <p>
+        <textarea name="comments"></textarea>
+    </p>
+    <button type="submit">Add</button>
+</form>
+
+<!-- #endregion -->
+
+{% endblock %}
