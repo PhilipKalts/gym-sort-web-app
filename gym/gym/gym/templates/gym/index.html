@@ -1,17 +1,34 @@
 {% extends "gym/layout.html" %}
+{% load static %}
+
+
 {% block body %}
+{% csrf_token %}
 
 <!-- #region Search -->
+<h2>Search</h2>
 <p>
     <input id="search-input" type="text" placeholder="Search name">
     <button id="search-button">Search</button>
 </p>
-<div id="results">
+<div id="results-container">
     <!--Results are displayed here-->
 </div>
 <!-- #endregion -->
 
-<p>All Trainees Selected</p>
+<!-- #region Selected Trainees -->
+
+<h2>Selected Trainees</h2>
+<div id="selected-trainees">
+    <p>No trainees selected yet.</p>
+</div>
 <button href="generate">Generate</button>
 
+<!-- #endregion -->
+
+{% endblock %}
+
+
+{% block script %}
+<script src="{% static 'gym/trainee.js' %}"></script>
 {% endblock %}
