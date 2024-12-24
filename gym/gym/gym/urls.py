@@ -27,4 +27,6 @@ urlpatterns = [
     path("edit-trainee/", views.edit_trainee, name="edit_trainee"),
     path("search-trainee/", views.search_trainee, name="search_trainee"),
     path("delete-trainee/", views.delete_trainee, name="delete_trainee"),
+    path("generate-rooms", views.generate_rooms, name="generate_rooms"),
+    path("mark-selected/", views.mark_selected, name="mark_selected"),
 ]

@@ -1,0 +1,33 @@
+{% extends "gym/layout.html" %}
+
+{% block body %}
+{% csrf_token %}
+<h1>Generated Rooms</h1>
+
+{% if rooms %}
+    {% for room_number, room in rooms.items %}
+<h2>Room {{ room_number }}</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Score</th>
+            <th>Comments</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for trainee in room %}
+        <tr>
+            <td>{{ trainee.name }}</td>
+            <td>{{ trainee.score }}</td>
+            <td>{{ trainee.comments }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+    {% endfor %}
+{% else %}
+<p>No rooms generated. Please go back and configure the trainees and rooms.</p>
+{% endif %}
+<a href="{% url 'index' %}">Go Back</a>
+{% endblock %}

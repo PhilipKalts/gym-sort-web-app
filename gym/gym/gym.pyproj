@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="gym\static\trainee.js" />
+    <Content Include="gym\templates\gym\rooms.html" />
     <Content Include="gym\templates\gym\trainees.html" />
     <Content Include="gym\templates\gym\index.html" />
     <Content Include="gym\templates\gym\layout.html" />

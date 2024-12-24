@@ -1,8 +1,15 @@
+let numRooms = 1;
+let maxTrainees = 5;
 let selectedTrainees = [];
 
+
 document.addEventListener('DOMContentLoaded', function () {
-    document.getElementById("search-button").addEventListener("click", searchTrainee)
+    document.getElementById("search-button").addEventListener("click", searchTrainee);
+    document.getElementById("update-config").addEventListener("click", updateConfiguration);
+    setStateForConfigurations();
 });
+
+
 
 function searchTrainee() {
     const searchInput = document.getElementById("search-input").value.trim();
@@ -49,9 +56,11 @@ function searchTrainee() {
     }
 }
 
+
+
 function selectTrainee(name, score, comments) {
-    if (selectedTrainees.length >= 20) {
-        alert("You can only select up to 20 trainees.");
+    if (selectedTrainees.length >= maxTrainees) {
+        alert(`$You can only select up to ${maxTrainees} trainees.`);
         return;
     }
 
@@ -62,22 +71,45 @@ function selectTrainee(name, score, comments) {
 
     selectedTrainees.push({ name, score, comments });
     updateSelectedTraineesUI();
+    markTrainee();
+
+    function updateSelectedTraineesUI() {
+        const selectedContainer = document.getElementById("selected-trainees");
+        selectedContainer.innerHTML = "";
+
+        selectedTrainees.forEach(trainee => {
+            const traineeDiv = document.createElement("div");
+            traineeDiv.innerHTML = `
+                <p><strong>Name:</strong> ${trainee.name}</p>
+                <p><strong>Score:</strong> ${trainee.score}</p>
+                <p><strong>Comments:</strong> ${trainee.comments}</p>
+                <hr>`;
+            selectedContainer.appendChild(traineeDiv);
+        });
+    }
+
+    function markTrainee() {
+        const csrfToken = document.querySelector('meta[name="csrf-token"]').getAttribute('content');
+
+        fetch(`/mark-selected/`, {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+                "X-CSRFToken": csrfToken,
+            },
+            body: JSON.stringify({ name }),
+        })
+        .then(response => response.json())
+        .then(data => {
+            if (!data.success) {
+                alert(data.message);
+            }
+        })
+        .catch(error => console.error("Error:", error));
+    }
 }
 
-function updateSelectedTraineesUI() {
-    const selectedContainer = document.getElementById("selected-trainees");
-    selectedContainer.innerHTML = "";
 
-    selectedTrainees.forEach(trainee => {
-        const traineeDiv = document.createElement("div");
-        traineeDiv.innerHTML = `
-            <p><strong>Name:</strong> ${trainee.name}</p>
-            <p><strong>Score:</strong> ${trainee.score}</p>
-            <p><strong>Comments:</strong> ${trainee.comments}</p>
-            <hr>`;
-        selectedContainer.appendChild(traineeDiv);
-    });
-}
 
 function deleteTrainee(name) {
     if (!confirm(`Are you sure you want to delete trainee ${name}?`)) {
@@ -168,4 +200,47 @@ function submitEdit() {
             resultsContainer.innerHTML = `<p style="color: red;">${data.message}</p>`;
         }
     }
+}
+
+
+
+function updateConfiguration() {
+    const numRoomsInput = document.getElementById("num-rooms").value;
+    const maxTraineesInput = document.getElementById("max-trainees").value;
+
+    if (!numRoomsInput || !maxTraineesInput) {
+        alert("Please provide valid inputs for both fields.");
+        return;
+    }
+
+    const parsedRooms = parseInt(numRoomsInput);
+    const parsedMaxTrainees = parseInt(maxTraineesInput);
+
+    if (parsedRooms < 1 || parsedMaxTrainees < 1) {
+        alert("Both values must be 1 or greater.");
+        return;
+    }
+
+    numRooms = parsedRooms;
+    maxTrainees = parsedMaxTrainees;
+
+    document.getElementById("hidden-num-rooms").value = numRooms;
+
+    alert(`Configuration updated! Rooms: ${numRooms}, Max Trainees: ${maxTrainees}`);
+    setDefaultState();
+}
+
+
+
+function setStateForConfigurations() {
+    document.getElementById('div_search').style.display = 'none';
+    document.getElementById('div_selected_trainees').style.display = 'none';
+}
+
+
+
+function setDefaultState() {
+    document.getElementById('config').style.display = 'none';
+    document.getElementById('div_search').style.display = 'block';
+    document.getElementById('div_selected_trainees').style.display = 'block';
 }

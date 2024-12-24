@@ -12,6 +12,8 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def index(request):
+    print("hello");
+    Trainee.objects.filter(selected=True).update(selected=False)
     return render(request, "gym/index.html")
 
 def trainees(request):
@@ -70,6 +72,7 @@ def edit_trainee(request):
         trainee.score = int(score)
         trainee.comments = comments
         trainee.save()
+        print(trainee.selected)
         return JsonResponse({"success": True, "message": "Trainee updated successfully!"})
     except Trainee.DoesNotExist:
         return JsonResponse({"success": False, "message": "Trainee not found."})
@@ -88,3 +91,34 @@ def delete_trainee(request):
         return JsonResponse({"success": True, "message": f"Trainee {name} deleted successfully!"})
     except Trainee.DoesNotExist:
         return JsonResponse({"success": False, "message": "Trainee not found."})
+
+
+
+@csrf_exempt
+def mark_selected(request):
+    print("W")
+    if request.method == "POST":
+        data = json.loads(request.body)
+        name = data.get("name")
+        try:
+            trainee = Trainee.objects.get(name=name)
+            trainee.selected = True
+            trainee.save()
+            return JsonResponse({"success": True, "message": "Trainee marked as selected."})
+        except Trainee.DoesNotExist:
+            return JsonResponse({"success": False, "message": "Trainee not found."})
+    return JsonResponse({"success": False, "message": "Invalid request method."})
+
+
+
+def generate_rooms(request):
+    selected_trainees = Trainee.objects.filter(selected=True).order_by("-score")
+    num_rooms = int(request.GET.get("num_rooms", 2))
+
+    # Create rooms with balanced distribution
+    rooms = {i + 1: [] for i in range(num_rooms)}
+    for index, trainee in enumerate(selected_trainees):
+        room_number = (index % num_rooms) + 1
+        rooms[room_number].append(trainee)
+
+    return render(request, "gym/rooms.html", {"rooms": rooms})

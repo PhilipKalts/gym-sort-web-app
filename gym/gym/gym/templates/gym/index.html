@@ -1,34 +1,59 @@
 {% extends "gym/layout.html" %}
 {% load static %}
 
+{% block script %}
+<script src="{% static 'gym/trainee.js' %}"></script>
+{% endblock %}
+
 
 {% block body %}
 {% csrf_token %}
+<meta name="csrf-token" content="{{ csrf_token }}">
+
+<!-- #region Inputs for Room and Trainee Limit -->
+<div id="config">
+    <p></p>
+    <h2>Room and Trainee Configuration</h2>
+    <form id="config-form">
+        <p>
+            <label for="num-rooms">Number of Rooms:</label>
+            <input id="num-rooms" type="number" min="1" value="1">
+        </p>
+        <p>
+            <label for="max-trainees">Maximum Trainees:</label>
+            <input id="max-trainees" type="number" min="1" value="5">
+        </p>
+        <button type="button" id="update-config">Update Configuration</button>
+    </form>
+</div>
+<!-- #endregion -->
 
 <!-- #region Search -->
-<h2>Search</h2>
-<p>
-    <input id="search-input" type="text" placeholder="Search name">
-    <button id="search-button">Search</button>
-</p>
-<div id="results-container">
-    <!--Results are displayed here-->
+<div id="div_search">
+    <p></p>
+    <h2>Search</h2>
+    <p>
+        <input id="search-input" type="text" placeholder="Search name">
+        <button id="search-button">Search</button>
+    </p>
+    <div id="results-container">
+        <!--Results are displayed here-->
+    </div>
 </div>
 <!-- #endregion -->
 
 <!-- #region Selected Trainees -->
-
-<h2>Selected Trainees</h2>
-<div id="selected-trainees">
-    <p>No trainees selected yet.</p>
+<div id="div_selected_trainees">
+    <p></p>
+    <h2>Selected Trainees</h2>
+    <div id="selected-trainees">
+        <p>No trainees selected yet.</p>
+    </div>
+    <form id="generate-form" action="{% url 'generate_rooms' %}" method="get">
+        <input type="hidden" name="num_rooms" id="hidden-num-rooms" value="1">
+        <button type="submit">Generate Rooms</button>
+    </form>
 </div>
-<button href="generate">Generate</button>
-
 <!-- #endregion -->
 
-{% endblock %}
-
-
-{% block script %}
-<script src="{% static 'gym/trainee.js' %}"></script>
 {% endblock %}
