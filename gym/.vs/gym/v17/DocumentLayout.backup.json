@@ -3,14 +3,6 @@
   "WorkspaceRootPath": "D:\\Other Projects\\gym-sort-web-app\\gym\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\rooms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\templates\\gym\\rooms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
-      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\static\\gym\\trainee.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gym\\gym\\static\\gym\\trainee.js||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -19,16 +11,24 @@
       "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\templates\\gym\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\templates\\gym\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}",
+      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\views.py||{8B382828-6202-11D1-8870-0000F87579D2}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\rooms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\templates\\gym\\rooms.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\urls.py||{8B382828-6202-11D1-8870-0000F87579D2}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\trainees\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:gym\\trainees\\models.py||{8B382828-6202-11D1-8870-0000F87579D2}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|solutionrelative:gym\\gym\\templates\\gym\\layout.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{7C3A4090-2218-4C59-863D-509879C5E3B3}|gym\\gym.pyproj|D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\settings.py||{8B382828-6202-11D1-8870-0000F87579D2}",
@@ -49,17 +49,17 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "rooms.html",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\rooms.html",
               "RelativeDocumentMoniker": "gym\\gym\\templates\\gym\\rooms.html",
               "ToolTip": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\rooms.html",
               "RelativeToolTip": "gym\\gym\\templates\\gym\\rooms.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAOAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-12-22T19:33:18.354Z",
               "IsPinned": true,
@@ -67,13 +67,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "views.py",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\views.py",
               "RelativeDocumentMoniker": "gym\\gym\\views.py",
               "ToolTip": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\views.py",
               "RelativeToolTip": "gym\\gym\\views.py",
-              "ViewState": "AgIAADAAAAAAAAAAAAAAAEIAAAA3AAAAAAAAAA==",
+              "ViewState": "AgIAAEYAAAAAAAAAAADgv1EAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
               "WhenOpened": "2024-12-15T06:00:19.856Z",
               "IsPinned": true,
@@ -81,13 +81,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "trainee.js",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\static\\gym\\trainee.js",
               "RelativeDocumentMoniker": "gym\\gym\\static\\gym\\trainee.js",
               "ToolTip": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\static\\gym\\trainee.js",
               "RelativeToolTip": "gym\\gym\\static\\gym\\trainee.js",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAQwFMAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
               "WhenOpened": "2024-12-21T16:14:49.977Z",
               "IsPinned": true,
@@ -95,13 +95,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "index.html",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\index.html",
               "RelativeDocumentMoniker": "gym\\gym\\templates\\gym\\index.html",
               "ToolTip": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\index.html",
               "RelativeToolTip": "gym\\gym\\templates\\gym\\index.html",
-              "ViewState": "AgIAAAIAAAAAAAAAAAAQwBQAAAATAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2024-12-15T05:59:49.226Z",
               "IsPinned": true,
@@ -113,7 +113,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "urls.py",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\urls.py",
               "RelativeDocumentMoniker": "gym\\gym\\urls.py",
@@ -121,8 +121,7 @@
               "RelativeToolTip": "gym\\gym\\urls.py",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAB4AAABGAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-15T05:57:10.765Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T05:57:10.765Z"
             },
             {
               "$type": "Document",
@@ -150,19 +149,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 2,
               "Title": "layout.html",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\layout.html",
               "RelativeDocumentMoniker": "gym\\gym\\templates\\gym\\layout.html",
               "ToolTip": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\gym\\templates\\gym\\layout.html",
               "RelativeToolTip": "gym\\gym\\templates\\gym\\layout.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2024-12-15T05:59:16.072Z"
+              "WhenOpened": "2024-12-15T05:59:16.072Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "models.py",
               "DocumentMoniker": "D:\\Other Projects\\gym-sort-web-app\\gym\\gym\\trainees\\models.py",
               "RelativeDocumentMoniker": "gym\\trainees\\models.py",
@@ -170,8 +170,7 @@
               "RelativeToolTip": "gym\\trainees\\models.py",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAWAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.002457|",
-              "WhenOpened": "2024-12-15T13:50:01.762Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-15T13:50:01.762Z"
             },
             {
               "$type": "Document",

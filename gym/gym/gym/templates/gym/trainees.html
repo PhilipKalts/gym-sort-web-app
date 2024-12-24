@@ -3,34 +3,36 @@
 {% block body %}
 
 <!-- #region message -->
-
 {% if message %}
-    {% if didAdd %}
-        <p style="color:green;">{{ message }}</p>
-    {% else %}
-        <p style="color:red;">{{ message }}</p>
-    {% endif %}
+<div class="alert {% if didAdd %}alert-success{% else %}alert-danger{% endif %}" role="alert">
+    {{ message }}
+</div>
 {% endif %}
-
 <!-- #endregion -->
 
 <!-- #region form -->
+<div class="card-header bg-primary text-white">
+    <h5 class="mb-0">Add Trainee</h5>
+</div>
+<div class="card-body">
+    <form method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            <label for="name" class="form-label">Trainee Name</label>
+            <input id="name" name="name" class="form-control" placeholder="Enter trainee name" required>
+        </div>
+        <div class="mb-3">
+            <label for="score" class="form-label">Score</label>
+            <input id="score" name="score" type="number" class="form-control" placeholder="Enter score (1-10)" min="1" max="10" required>
+        </div>
+        <div class="mb-3">
+            <label for="comments" class="form-label">Comments</label>
+            <textarea id="comments" name="comments" class="form-control" rows="3" placeholder="Enter any comments"></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary w-100">Add Trainee</button>
+    </form>
 
-<form method="post">
-    {% csrf_token %}
-    <p>
-        <input name="name" placeholder="Trainee Name" required>
-    </p>
-    <p>
-        <input name="score" type="number" placeholder="Score" min="1" max="10" required>
-    </p>
-
-    Comments
-    <p>
-        <textarea name="comments"></textarea>
-    </p>
-    <button type="submit">Add</button>
-</form>
+</div>
 
 <!-- #endregion -->
 

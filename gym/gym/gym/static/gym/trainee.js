@@ -43,19 +43,29 @@ function searchTrainee() {
         const trainees = data.trainees;
         trainees.forEach(trainee => {
             const traineeDiv = document.createElement("div");
-            traineeDiv.innerHTML = `
-                        <p><strong>Name:</strong> ${trainee.name}</p>
-                        <p><strong>Score:</strong> ${trainee.score}</p>
-                        <p><strong>Comments:</strong> ${trainee.comments}</p>
-                        <button onclick="editTrainee('${trainee.name}', ${trainee.score}, '${trainee.comments}')">Edit</button>
-                        <button onclick="deleteTrainee('${trainee.name}')">Delete</button>
-                        <button onclick="selectTrainee('${trainee.name}', ${trainee.score}, '${trainee.comments}')">Select</button>
-                        <hr>`;
+            showTrainee(traineeDiv, trainee);
             resultsContainer.appendChild(traineeDiv);
         });
     }
 }
 
+
+function showTrainee(div, trainee) {
+    div.innerHTML = `
+        <div class="card mb-3">
+            <div class="card-body">
+                <h5 class="card-title">${trainee.name}</h5>
+                <p><strong>Score:</strong> ${trainee.score}</p>
+                <p><strong>Comments:</strong> ${trainee.comments}</p>
+                <div class="btn-group" role="group">
+                    <button onclick="editTrainee('${trainee.name}', ${trainee.score}, '${trainee.comments}')" class="btn btn-warning btn-sm">Edit</button>
+                    <button onclick="deleteTrainee('${trainee.name}')" class="btn btn-danger btn-sm">Delete</button>
+                    <button onclick="selectTrainee('${trainee.name}', ${trainee.score}, '${trainee.comments}')" class="btn btn-success btn-sm">Select</button>
+                </div>
+            </div>
+        </div>
+        <hr>`;
+}
 
 
 function selectTrainee(name, score, comments) {
@@ -79,11 +89,7 @@ function selectTrainee(name, score, comments) {
 
         selectedTrainees.forEach(trainee => {
             const traineeDiv = document.createElement("div");
-            traineeDiv.innerHTML = `
-                <p><strong>Name:</strong> ${trainee.name}</p>
-                <p><strong>Score:</strong> ${trainee.score}</p>
-                <p><strong>Comments:</strong> ${trainee.comments}</p>
-                <hr>`;
+            showTrainee(traineeDiv, trainee);
             selectedContainer.appendChild(traineeDiv);
         });
     }
@@ -151,23 +157,31 @@ function editTrainee(name, score, comments) {
     }
 
     resultsContainer.innerHTML = `
-        <form id="edit-form">
-            <input type="hidden" name="csrfmiddlewaretoken" value="${document.querySelector("[name=csrfmiddlewaretoken]").value}">
-            <p>
-                <label>Name:</label>
-                <input name="name" value="${name}" readonly>
-            </p>
-            <p>
-                <label>Score:</label>
-                <input name="score" type="number" value="${score}" min="1" max="10" required>
-            </p>
-            <p>
-                <label>Comments:</label>
-                <textarea name="comments">${comments}</textarea>
-            </p>
-            <button type="button" onclick="submitEdit()">Save</button>
-        </form>
-        `;
+        <div class="card p-4">
+            <h3 class="text-center mb-4">Edit Trainee</h3>
+            <form id="edit-form">
+                <input type="hidden" name="csrfmiddlewaretoken" value="${document.querySelector("[name=csrfmiddlewaretoken]").value}">
+            
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input name="name" id="name" value="${name}" readonly class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="score" class="form-label">Score:</label>
+                    <input name="score" id="score" type="number" value="${score}" min="1" max="10" required class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="comments" class="form-label">Comments:</label>
+                    <textarea name="comments" id="comments" class="form-control">${comments}</textarea>
+                </div>
+
+                <div class="text-center">
+                    <button type="button" onclick="submitEdit()" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>`;
 }
 
 
