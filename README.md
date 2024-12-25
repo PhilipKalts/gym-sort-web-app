@@ -12,6 +12,23 @@ were each time they have to see the names of the
 
 ## How to run the application
 • Download the project files and open the command prompt.
+
 • Go to the directory where the downloaded files are located
-• Press the following command: "python manage.py runserver" and **Enter**
-• Open the browser of your choosing and enter the link ""
+
+• Type the following command: ```python manage.py runserver``` and **Enter**
+
+• Open the browser of your choosing and visit the link: http://127.0.0.1:8000/
+
+• Register as a new user to the **Register** page 
+> You can go there by selecting the __register__ button on the top bar
+> 
+> Or by going to the URL http://127.0.0.1:8000/register
+
+• From there you will be directed to the home page where you are asked to enter the total number of room and the max number of trainees you can select.
+
+• Now you can search trainees from the search bar and do the following: 
+ - View their data
+ - Edit
+ - Delete
+ - Select
+
