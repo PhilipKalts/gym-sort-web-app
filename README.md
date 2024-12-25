@@ -6,7 +6,8 @@ they have multiple classes per hour with a lot of people with various skill leve
 This process may take a lot of time. Thus I was inspired to create a web application which could solve this issue.
 A web application where the fitness instructors would first set how many **rooms** they are available and the max number trainees they can have.
 Afterwards, they would search the database for the trainees to add and select them. Afterwards, the application would provide the rooms based on the skill level of the trainees and which room they belong to.
-I am a life time gym goer myself and I have not seen something similar to this and I am certain it would increase their productivity a lot.
+I am a life time gym goer myself and I have not seen something similar to this and I am certain it would increase their productivity a lot. 
+The complexity resides on the factors the web application needed dynamic room and trainee management, skill based sorting, user authentication, communication betwwen the back-end and the front-end.
 
 ## Skills Learned
 - All of the projects in the course were provided with a starting point. Starting my own web application was more daunting than first anticipated.
@@ -19,9 +20,9 @@ I am a life time gym goer myself and I have not seen something similar to this a
 - Type the following command: ```python manage.py runserver``` and **Enter**.
 - Open the browser of your choosing and visit the link: http://127.0.0.1:8000/
 - Register as a new user to the **Register** page.
-> You can go there by selecting the __register__ button on the top bar.
-> 
-> Or by going to the URL http://127.0.0.1:8000/register.
+  > You can go there by selecting the __register__ button on the top bar.
+  >
+  > Or by going to the URL http://127.0.0.1:8000/register.
 - From there you will be directed to the home page where you are asked to enter the total number of room and the max number of trainees you can select.
 - Now you can search trainees from the search bar and do the following:
   - View their data
